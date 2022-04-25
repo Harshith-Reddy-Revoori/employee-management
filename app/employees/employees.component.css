@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Poppins&display=swap');
+*{
+    font:poppins;
+}
+.employees {
+  padding: 3em 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: black solid 1em;
+  border-top: 0;
+  gap: 1em 1em;
+  row-gap: 0.3%;
+  background-color: lightgray;
+}
+
+.title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.employee {
+  color: hsl(var(--clr-accent));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1;
+  max-height: 500px;
+}
+

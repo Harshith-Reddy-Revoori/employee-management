@@ -1,0 +1,10 @@
+<div class="employees container">
+  <h1 class="title" [title]="'Employees list'">Employees</h1>
+  <p *ngIf="(!employees || (employees && employees.length === 0)); else lessEmployees" id="no-records">No record found</p>
+  <ng-template #lessEmployees>
+    <app-employee *ngFor="let employee of employees.data"
+                 [employee]="employee"
+                 (employeeDelete)="handleEmployeeDelete($event)">
+                 </app-employee>
+  </ng-template>
+</div>
